@@ -30,3 +30,4 @@ in the "Additional Libraries and Frameworks" section
     and [logback](https://github.com/qos-ch/logback) for logging
 4. Added Apache License v2 in `gradle/spotless.kotlin.license`<br />**Remember to change `<insert-company-name-here>` to your company name.**
 5. Set up modules in `settings.gradle`
+6. Add `.gitignore` from kethereum
