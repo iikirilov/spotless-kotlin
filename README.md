@@ -1,20 +1,14 @@
 # spotless-kotlin
 A template modular Kotlin (Java) project configured with Gradle and Spotless plugin for Klean Kotlin Kode.
 
-# Spotless Defaults
-
-### Kotlin
-Uses [ktlint](https://github.com/diffplug/spotless/tree/master/plugin-gradle) behind the scenes. By default:
-1. Max Line Length = 100
-2. Inserts new line at the end of every `.kt` file
-3. Puts an Apache License v2 at the top of every `.kt` file. You can change the license by modifying `gradle/spotless.kotlin.license`
-
-### Gradle
-Uses [groovy eclipse](https://github.com/diffplug/spotless/tree/master/plugin-gradle#groovy-eclipse) with the config file specified in `gradle/formatter.properties`. By default:
-1. Uses 4 `space` as the indentation
-2. Indentations are not inserted in empty lines
-2. Inserts new line at the end of every `.gradle` file
-
+# How to use
+1. In the directory you want your project run:
+    1. `git clone https://github.com/iikirilov/spotless-kotlin <you_project_name>`
+    2. `cd <you_project_name>`
+    3. `rm -rf .git`
+    4. `git init`
+    5. `git add -A`
+    6. `git commit -m "Initial commit"`
 
 # Steps used to create this project
 1. Created a new Gradle project in Intellij checking the Kotlin (Java) checkbox 
@@ -31,3 +25,17 @@ in the "Additional Libraries and Frameworks" section
 4. Added Apache License v2 in `gradle/spotless.kotlin.license`<br />**Remember to change `<insert-company-name-here>` to your company name.**
 5. Set up modules in `settings.gradle`
 6. Add `.gitignore` from kethereum
+
+# Spotless Defaults
+
+### Kotlin
+Uses [ktlint](https://github.com/diffplug/spotless/tree/master/plugin-gradle) behind the scenes. By default:
+1. Max Line Length = 100
+2. Inserts new line at the end of every `.kt` file
+3. Puts an Apache License v2 at the top of every `.kt` file. You can change the license by modifying `gradle/spotless.kotlin.license`
+
+### Gradle
+Uses [groovy eclipse](https://github.com/diffplug/spotless/tree/master/plugin-gradle#groovy-eclipse) with the config file specified in `gradle/formatter.properties`. By default:
+1. Uses 4 `space` as the indentation
+2. Indentations are not inserted in empty lines
+2. Inserts new line at the end of every `.gradle` file
