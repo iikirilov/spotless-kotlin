@@ -29,14 +29,14 @@ Modular code is awesome!! It makes it easier to build, maintain and re-use code.
 ### Module structure:
 
 ```bash
-├── <module_name>
-│   ├── src
-│   │   ├── main
-│   │   │   ├── kotlin
-│   │   │   ├── resources
-│   │   ├── test
-│   │   │   ├── kotlin
-│   │   │   ├── resources
+└── <module_name>
+    └── src
+        ├── main
+        │   ├── kotlin
+        │   └── resources
+        └── test
+            ├── kotlin
+            └── resources
 ```
 
 ### Adding a module:
