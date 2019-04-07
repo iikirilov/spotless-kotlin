@@ -41,7 +41,7 @@ Modular code is awesome!! It makes it easier to build, maintain and re-use code.
 
 ### Adding a module:
 
-Add a new line to `settings.gradle` in the format `include '<module_name>'`. Then create the folder structure in the project root as decribed in [module structure](Module-structure).
+Add a new line to `settings.gradle` in the format `include '<module_name>'`. Then create the folder structure in the project root as decribed in [module structure](README.md#Module-structure).
 
 #### Adding a nested module:
 
@@ -50,7 +50,7 @@ include '<parent_module>:<child_module>'
 include `<parent_module>:<child_module_1>`
 ```
 
-Then create the `parnet_module` folder in the project root and then the folder structure described in [module structure](Module-structure) in the `parnet_module` folder.
+Then create the `parnet_module` folder in the project root and then the folder structure described in [module structure](README.md#Module-structure) in the `parnet_module` folder.
 
 # Steps used to create this template
 1. Created a new Gradle project in Intellij checking the Kotlin (Java) checkbox 
