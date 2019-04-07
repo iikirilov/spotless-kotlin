@@ -19,10 +19,11 @@ The template was designed and tested in Intellij Idea, but should be useable in 
     8. `git remote add origin <your_remote_repo_url>`
     9. `git commit -m "Initial commit"`
 2. Open your newly created project in you IDE of choice.
-3. Create your modules as described below. [Optional]
-4. Write some kotlin.
-5. Run `./gradlew spotlessApply` to automatically klean up you kode.
-6. Commit, push and repeat from 4.
+3. Create your modules as described [here](README.md#Modules). [Optional]
+4. Set-up logback. [TODO]
+5. Write some kotlin.
+6. Run `./gradlew spotlessApply` to automatically klean up you kode.
+7. Commit, push and repeat from 5.
     
 # Modules
 
@@ -53,6 +54,24 @@ include `<parent_module>:<child_module_1>`
 ```
 
 Then create the `parnet_module` folder in the project root and then the folder structure described in [module structure](README.md#Module-structure) in the `parnet_module` folder.
+
+# Logback [TODO]
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
+```
 
 # Steps used to create this template
 1. Created a new Gradle project in Intellij checking the Kotlin (Java) checkbox 
