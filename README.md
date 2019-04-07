@@ -2,7 +2,7 @@
 
 A template Kotlin (Java) project configured with Gradle and Spotless plugin for Klean Kotlin Kode.
 
-The template comes with a ktlint, logging and testing frameworks built in. See (here)[README.md#Steps_used_to_create_this_template] for more information.
+The template comes with a ktlint, logging and testing frameworks built in. See [here](README.md#Steps_used_to_create_this_template) for more information.
 
 The template was designed and tested in Intellij Idea, but should be useable in other IDEs.
 
