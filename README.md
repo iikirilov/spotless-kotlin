@@ -2,13 +2,13 @@
 
 A template Kotlin (Java) project configured with Gradle and Spotless plugin for Klean Kotlin Kode.
 
-The template comes with a ktlint, logging and testing frameworks built in. See [here](README.md#Steps-used-to-create-this-template) for more information.
+The template comes with a ktlint, logging, gitignore, gradle and junit preconfigured. See [here](README.md#Steps-used-to-create-this-template) for more information.
 
 The template was designed and tested in Intellij Idea, but should be useable in other IDEs.
 
 # How to use
 
-1. In the directory you want your project run:
+1. In the parent directory you want your in project run:
     1. `git clone https://github.com/iikirilov/spotless-kotlin <you_project_name>`
     2. `cd <you_project_name>`
     3. `rm -rf .git`
@@ -68,7 +68,7 @@ in the "Additional Libraries and Frameworks" section
     and [logback](https://github.com/qos-ch/logback) for logging
 4. Added Apache License v2 in `gradle/spotless.kotlin.license`<br />**Remember to change `<insert-company-name-here>` to your company name.**
 5. Set up modules in `settings.gradle`
-6. Add `.gitignore` from kethereum
+6. Generate `.gitignore` for Kotlin, JetBrains and Gradle using Intellij plugin
 
 # Spotless Defaults
 
