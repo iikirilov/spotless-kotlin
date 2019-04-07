@@ -1,6 +1,6 @@
 buildscript {
 
-    ext.kotlinLoggingVersion = '1.7.25'
+    ext.kotlinLoggingVersion = '1.6.24'
     ext.logbackVersion = '1.2.3'
     
     ext.junitVersion = '5.3.2'
