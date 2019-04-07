@@ -61,7 +61,7 @@ in the "Additional Libraries and Frameworks" section
 3. Modify `build.gradle`
     1. Removed the `version` label
     2. Adding [spotless gradle plugin](https://github.com/diffplug/spotless/tree/master/plugin-gradle)
-    3. Configured [Spotless Defaults](Spotless-Defaults)
+    3. Configured [Spotless Defaults](README.md#Spotless-Defaults)
     4. Added [kotlin-logging](https://github.com/MicroUtils/kotlin-loggingw)
     and [logback](https://github.com/qos-ch/logback) for logging
 4. Added Apache License v2 in `gradle/spotless.kotlin.license`<br />**Remember to change `<insert-company-name-here>` to your company name.**
