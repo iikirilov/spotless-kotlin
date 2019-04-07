@@ -1,16 +1,58 @@
 # spotless-kotlin
-A template modular Kotlin (Java) project configured with Gradle and Spotless plugin for Klean Kotlin Kode.
+
+A template Kotlin (Java) project configured with Gradle and Spotless plugin for Klean Kotlin Kode.
+
+The template was designed and tested in Intellij Idea, but should be useable in other IDEs.
 
 # How to use
+
 1. In the directory you want your project run:
     1. `git clone https://github.com/iikirilov/spotless-kotlin <you_project_name>`
     2. `cd <you_project_name>`
     3. `rm -rf .git`
     4. `git init`
-    5. `git add -A`
-    6. `git commit -m "Initial commit"`
+    5. Add your `rootProject.name` name to `settings.gradle`
+    6. Edit `gradle/spotless.kotlin.license` to inclide your company name
+    7. `git add -A`
+    8. `git remote add origin <your_remote_repo_url>`
+    9. `git commit -m "Initial commit"`
+2. Open your newly created project in you IDE of choice.
+3. Create your modules as described below. [Optional]
+4. Write some kotlin.
+5. Run `./gradlew spotlessApply` to automatically klean up you kode.
+6. Commit, push and repeat from 4.
+    
+# Modules
 
-# Steps used to create this project
+Modular code is awesome!! It makes it easier to build, maintain and re-use code. The root directory is already a module. You do not need to create modules if you feel your project does not need them, instead you can put your `src` folder directly in the project root.
+
+### Module structure:
+
+```bash
+├── <module_name>
+│   ├── src
+│   │   ├── main
+│   │   |   ├── kotlin
+│   │   |   ├── resources
+│   │   ├── test
+│   │   |   ├── kotlin
+│   │   |   ├── resources
+```
+
+### Adding a module:
+
+Add a new line to `settings.gradle` in the format `include '<module_name>'`. Then create the folder structure in the project root as decribed in [module structure](Module-structure).
+
+#### Adding a nested module:
+
+```
+include '<parent_module>:<child_module>'
+include `<parent_module>:<child_module_1>`
+```
+
+Then create the `parnet_module` folder in the project root and then the folder structure described in [module structure](Module-structure) in the `parnet_module` folder.
+
+# Steps used to create this template
 1. Created a new Gradle project in Intellij checking the Kotlin (Java) checkbox 
 in the "Additional Libraries and Frameworks" section
 2. Set up git - in the project directory
