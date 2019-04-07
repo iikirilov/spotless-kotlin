@@ -15,9 +15,10 @@ The template was designed and tested in Intellij Idea, but should be useable in 
     4. `git init`
     5. Add your `rootProject.name` name to `settings.gradle`
     6. Edit `gradle/spotless.kotlin.license` to inclide your company name
-    7. `git add -A`
-    8. `git remote add origin <your_remote_repo_url>`
-    9. `git commit -m "Initial commit"`
+    7. Edit `README.md`
+    8. `git add -A`
+    9. `git remote add origin <your_remote_repo_url>`
+    10. `git commit -m "Initial commit"`
 2. Open your newly created project in you IDE of choice.
 3. Create your modules as described [here](README.md#Modules). [Optional]
 4. Set-up logback. [TODO]
