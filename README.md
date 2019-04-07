@@ -32,11 +32,11 @@ Modular code is awesome!! It makes it easier to build, maintain and re-use code.
 ├── <module_name>
 │   ├── src
 │   │   ├── main
-│   │   |   ├── kotlin
-│   │   |   ├── resources
+│   │   │   ├── kotlin
+│   │   │   ├── resources
 │   │   ├── test
-│   │   |   ├── kotlin
-│   │   |   ├── resources
+│   │   │   ├── kotlin
+│   │   │   ├── resources
 ```
 
 ### Adding a module:
