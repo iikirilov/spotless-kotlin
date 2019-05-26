@@ -11,19 +11,12 @@ The template was designed and tested in Intellij Idea, but should be useable in 
 1. In the parent directory you want your in project run:
     1. `git clone https://github.com/iikirilov/spotless-kotlin <you_project_name>`
     2. `cd <you_project_name>`
-    3. `rm -rf .git`
-    4. `git init`
-    5. Add your `rootProject.name` name to `settings.gradle`
-    6. Edit `gradle/spotless.kotlin.license` to inclide your company name
-    7. Edit `README.md`
-    8. `git add -A`
-    9. `git remote add origin <your_remote_repo_url>`
-    10. `git commit -m "Initial commit"`
+    3. `./init.sh`
 2. Open your newly created project in you IDE of choice.
 3. Create your [modules](README.md#Modules). [Optional]
-4. Set-up [logging](README.md#Modules). [TODO]
+4. Set-up [logging](README.md#Modules).
 5. Write some kotlin.
-6. Run `./gradlew spotlessApply` to automatically klean up you kode.
+6. Run `./gradlew spotlessApply` to klean up you kode.
 7. Commit, push and repeat from 5.
     
 # Modules
