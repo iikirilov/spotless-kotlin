@@ -39,11 +39,11 @@ allprojects {
 
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-                "io.github.microutils:kotlin-logging:$kotlinLoggingVersion"
+                "io.github.microutils:kotlin-logging:$kotlinLoggingVersion",
+                "ch.qos.logback:logback-classic:$logbackVersion"
 
         testCompile "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
-                "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion",
-                "ch.qos.logback:logback-classic:$logbackVersion"
+                "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion"
     }
 
     compileKotlin { kotlinOptions.jvmTarget = "1.8" }

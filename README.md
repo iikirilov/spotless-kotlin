@@ -20,8 +20,8 @@ The template was designed and tested in Intellij Idea, but should be useable in 
     9. `git remote add origin <your_remote_repo_url>`
     10. `git commit -m "Initial commit"`
 2. Open your newly created project in you IDE of choice.
-3. Create your modules as described [here](README.md#Modules). [Optional]
-4. Set-up logback. [TODO]
+3. Create your [modules](README.md#Modules). [Optional]
+4. Set-up [logging](README.md#Modules). [TODO]
 5. Write some kotlin.
 6. Run `./gradlew spotlessApply` to automatically klean up you kode.
 7. Commit, push and repeat from 5.
@@ -56,7 +56,25 @@ include `<parent_module>:<child_module_1>`
 
 Then create the `parnet_module` folder in the project root and then the folder structure described in [module structure](README.md#Module-structure) in the `parnet_module` folder.
 
-# Logback [TODO]
+The following is an example `settings.gradle` file. The file includes the root project name.
+
+```
+rootProject.name = 'spotless-kotlin'
+
+include 'module1'
+include 'module2:module2a'
+include 'module2:module2b'
+```
+
+# Logging
+
+Logging is set up using [kotlin-logging](https://github.com/MicroUtils/kotlin-logging) and [logback](https://github.com/qos-ch/logback).
+
+Declare a logger wherever you need it like this: `val logger = KotlinLogging.logger {}`
+
+Logback configuration should be located in `src/main/resources/logback.xml`. 
+Logback configuration for tests should be located in `src/test/resources/logback-test.xml`. 
+The following is a minimal configuration of a logback config file.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,7 +102,7 @@ in the "Additional Libraries and Frameworks" section
     1. Removed the `version` label
     2. Adding [spotless gradle plugin](https://github.com/diffplug/spotless/tree/master/plugin-gradle)
     3. Configured [Spotless Defaults](README.md#Spotless-Defaults)
-    4. Added [kotlin-logging](https://github.com/MicroUtils/kotlin-loggingw)
+    4. Added [kotlin-logging](https://github.com/MicroUtils/kotlin-logging)
     and [logback](https://github.com/qos-ch/logback) for logging
 4. Added Apache License v2 in `gradle/spotless.kotlin.license`<br />**Remember to change `<insert-company-name-here>` to your company name.**
 5. Set up modules in `settings.gradle`
